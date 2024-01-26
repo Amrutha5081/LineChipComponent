@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+live preview (used Vercel for this): https://line-chipz-pku1vrh5b-amrutha5081.vercel.app
 ## Available Scripts
 
 In the project directory, you can run:
