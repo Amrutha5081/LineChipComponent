@@ -1,49 +1,85 @@
 .pick-users-title {
-    text-align: center;
-    color: blue;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 26px; 
-  }
+  text-align: center;
+  color: blue;
+  font-size: 24px; /* Adjust as needed */
+}
+
+.select-container {
+  width: 80%;
+}
+
+/* Additional styles for icon, name, and email within options */
+.Select-option > span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Select-option > span > img {
+  /* Style for circle image icon */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.Select-option > span > div {
+  /* Adjust layout for name and email */
+  display: flex;
+  flex-direction: column;
+}
+
+.Select-value-label > span {
+  /* Display only image and name for selected options */
+  display: flex;
+  align-items: center;
+}
+
+.Select-option.is-highlighted {
+  background-color: lightblue; /* Ensure this matches the inline style */
+}
+
+/* To also highlight the X icon, if it's not already affected by the above rule: */
+.Select-option.is-highlighted .Select-clear-indicator {
+  color: lightblue; /* Or any preferred highlight color */
+}
+.react-select__control::before {
+  content: "Add new user...";
   
-  .select-container {
-    width: 80%;
-    margin-left: 125px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  width: 100%; 
+ 
+}
+
+.react-select__control {
+  width: 250px;
+  font-size: 16px;
+}
+
+.react-select__menu {
+  max-height: 300px;
+}
+
+
+@media (max-width: 768px) {
+  .react-select__control {
+    width: 100%; 
+    font-size: 14px; 
   }
-  
-  /* Additional styles for icon, name, and email within options */
-  .Select-option > span {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    
+  hr {
+    width: 80%; 
   }
-  
-  .Select-option > span > img {
-    /* Style for circle image icon */
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
+  .react-select__menu {
+    max-height: 200px; 
   }
-  
-  .Select-option > span > div {
-    /* Adjust layout for name and email */
-    display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 1024px) { 
+  hr {
+    width: 70%; 
   }
-  
-  .Select-value-label > span {
-    /* Display only image and name for selected options */
-    display: flex;
-    align-items: center;
-  }
-  
-  .Select-option.is-highlighted {
-    backgroundcolor: lightblue; /* Ensure this matches the inline style */
-  }
-  
-  /* To also highlight the X icon, if it's not already affected by the above rule: */
-  .Select-option.is-highlighted .Select-clear-indicator {
-    color: lightblue; /* Or any preferred highlight color */
-  }
-  
+}
+

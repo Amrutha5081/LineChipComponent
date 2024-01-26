@@ -128,7 +128,7 @@ const Line = () => {
           <div
             style={{
               fontSize: "14px",
-              fontWeight: context === "menu" ? "italic" : "normal",
+              fontWeight: context === "menu" ? "bold" : "normal",
               fontStyle: context === "menu" ? "Sans-Serif" : "normal",
             }}
           >
@@ -189,7 +189,8 @@ const Line = () => {
               ...baseStyles,
               border: "none",
               boxShadow: "none",
-              width: "100%", 
+              textAlign: "left",
+              paddingLeft: "50px"
             }),
             option: (provided, state) => ({
               ...provided,
@@ -198,13 +199,14 @@ const Line = () => {
             }),
             placeholder: (provided) => ({
               ...provided,
-              marginRight: "600px", 
-              marginTop: "17px",
+              marginBottom: "4px",
+              marginLeft: "20px",
             }),
             menu: (provided) => ({
               ...provided,
               width: "fit-content",
               borderRadius: "6px",
+              marginLeft: "90px",
             }),
             menuList: (provided) => ({
               ...provided,
@@ -214,7 +216,15 @@ const Line = () => {
           formatOptionLabel={formatOptionLabel}
         />
       </div>
-      <hr style={{ width: "650px", marginTop: "20px", marginBottom: "20px" }} /> {/* Add margin to the hr element */}
+      <hr
+        style={{
+            margin: "20px 60px", 
+            border: "1px solid #ccc", 
+          width: "70%",
+          marginLeft: "70px",
+          paddingLeft: "50px",
+        }}
+      />
     </>
   );
 };
